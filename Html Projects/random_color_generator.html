@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random color generator</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@600&display=swap');
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: 'Quicksand', sans-serif;
+        }
+        body {
+            background: #000000;
+        }
+        /* WHOLE BODY CONTAIN BOTH TEXT AND BUTTON */
+        .main {
+            background: white;
+            width: 350px;
+            height: 250px;
+            position: absolute;
+            /*  relative position humesha top se chalu hogi */
+            /* position absolute karne ke baad he uspe top or left kaam kiye hai */
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            display: flex;
+            justify-content: center;
+            /* flex display ko centre mai le aaya */
+            align-items: center;
+            /* dono centre mai aa gye */
+            flex-direction: column;
+            /* flex direction se upar niche a gye */
+        }
+        /* FOR THE TEXT */
+        #text {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+        /* FOR GENERATE BUTTON */
+        .generateBtn {
+            padding: 10px 20px;
+            font-size: 1.1rem;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            background: #1687a7;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div id="text">#000000</div>
+        <button onclick="generateColor()" class="generateBtn">Generate color</button>
+    </div>
+</body>
+<script>
+    function generateColor() {
+        var randomColor = (Math.floor(Math.random()*16777216)).toString(16);
+        console.log(randomColor);
+        document.body.style.backgroundColor = "#" + randomColor;
+        var text = document.getElementById("text");
+        text.innerText= "#" + randomColor;
+    }
+</script>
+</html>
