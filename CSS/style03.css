@@ -1,0 +1,74 @@
+* {
+    box-sizing: border-box;
+    list-style: none;
+}
+body {
+    margin: 0;
+}
+header {
+    padding: 50px;
+    text-align: center;
+    background-color: rgb(51, 161, 125);
+    color: white;
+}
+
+header h1 {
+    font-size: 40px
+    /* tells the size of the h1 heading */
+}
+
+nav {
+    background-color: #333;
+    overflow: hidden;
+    /* overflow is used to hide the float element */
+}
+
+nav a {
+    color: white;
+    padding: 14px 20px;
+    /* text-align: left; */
+    text-decoration: none;
+    display: inline;
+    float: left;
+}
+nav a:hover {
+    color: hotpink;
+}
+nav a:visited {
+    color: tomato;
+}
+
+section {
+    text-align: center;
+    padding-top: 30px;
+height: 100vh;
+}
+
+h2 {
+    background-color: teal;
+}
+
+section:nth-child(even){
+    background-color: #d6cece;
+}
+iframe{
+    padding: 0px 5px;
+}
+img {
+    padding: 0px 20px;
+}
+footer {
+    overflow: hidden;
+    background-color: rgb(114, 112, 112);
+}
+footer a{
+    padding: 14px 20px;
+    color: white;
+    float: left;
+    text-decoration: none;
+    /* text decoration is used to remove the underline from the txt */
+}
+
+.copyright {
+    float: right;
+}

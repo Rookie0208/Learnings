@@ -1,0 +1,29 @@
+import requests     # to access the https 
+from datetime import datetime
+import pytz         # to set the time zone
+
+IST = pytz.timezone('Asia/Kolkata')   # take the time zone of asia
+raw_TS = datetime.now(IST)      # raw timeStamp to fix the date time format
+curr_date = raw_TS.strftime("%d-%m-%Y") # extract datetime from raw_TS and fix the format
+curr_time = raw_TS.strftime("%H:%M:%S") # similarly goes for this (24 hour)
+
+telegram_auth_token = "5074566296:AAGbuJbp07s0WPJ5hrr1KTwrEKm2GyeajmM"  # authentication token by telegram
+telegram_group_id = "Chindi420"              # telegram group id
+
+# this f-string is for string formatting
+msg = f"Message received on {curr_date} at {curr_time}"     # this message will be received by the bot
+
+# msg1 = input("Enter the msg to send : ")
+# MAIN FUNCTION
+def send_msg_on_telegram(message):
+    telegram_api_url = f"https://api.telegram.org/bot{telegram_auth_token}/sendMessage?chat_id=@{telegram_group_id}&text={message}"
+    tel_resp = requests.get(telegram_api_url)       #request is used to send a rqst at telegram_api_url
+# the response is stored in tel_resp
+# if response is equal to 200 that means message sent successfully
+    if tel_resp.status_code == 200:     #200 is used for successful
+        print("INFO : Notification has been sent on Telegram")
+    else:
+        print("ERROR : Could not send Message")
+
+send_msg_on_telegram(msg)
+# send_msg_on_telegram(msg1, msg)

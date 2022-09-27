@@ -1,0 +1,191 @@
+'''
+this will be a quiz game
+define count to count it at the last i.e. the total score at the end
+ask about no. of questions i.e. make options from 3 to 10 questions
+for each correct question '1' point is given and '0' for incorrect
+
+'''
+print('''****** Welcome to the Self Evaluation Test ******\n''')
+print("This test help to know about your knowledgeble field\n")
+choice = input("If you want to play choose 'y' and if not choose 'n' : ")
+print("\n")
+
+if choice == 'y':
+    username = input("Enter your name : ")
+else:
+    print("Okayy, Have fun :) ")
+    quit()
+
+print(f"Heyy!!, {username} ")
+print("\n")
+print("How many questions do you want in your quiz\n")
+print("You can choose 3 or 5")
+ques = input()
+score = 0
+
+# ------------------ 3 QUESTION QUIZ ------------------------------------------------------
+if ques == '3':
+    print("\n")
+    print("++++++++++++++++++++++++++ Let's Begin ++++++++++++++++++++++++++++++++")
+    print("\n")
+    print("Your quiz consist of total of 3 questions")
+    print("for each correct answer '1' point is rewarded and '0' for incorrect")
+
+    print("\n")
+    print("***********************************************************************")
+    print("\n")
+    answer = input("Question 1: What can be broken but never held? : ")
+    if answer.lower == "promise":
+        print("yeahhh...You guessed it right ")
+        score += 1
+        # print(f"Here you completed your quiz and your final score is {score}/3")
+
+    else:
+        print("Ooh no, it is wrong answer ")
+        print("The correct answer is 'promise' ")
+        score += 0
+        # print(f"Here you completed your quiz and your final score is {score}/3")
+
+
+    print("\n")
+    print("***********************************************************************")
+    print("\n")
+    answer = input("Question 2: If you have a bowl with six apples and you take away four, how many do you have? (use numbers): ")
+    if answer == "4":
+        print("yeahhh...You guessed it right ")
+        score += 1
+        # print(f"Here you completed your quiz and your final score is {score}/3")
+    else:
+        print("Ooh no, it is wrong answer ")
+        print("The correct answer is 4 ")
+        print("Actually, you grabbed four apples, so you have four and only two are left in the bowl")
+        score += 0
+        # print(f"Here you completed your quiz and your final score is {score}/3")
+        
+    print("\n")
+    print("***********************************************************************")
+    print("\n")
+    answer = input("Question 3: which is the smallest country in the world : ")
+    if answer.lower == "vetican city":
+        print("yeahhh...You guessed it right ")
+        score += 1
+        # print(f"Here you completed your quiz and your final score is {score}/3")
+
+    else:
+        print("Ooh no, it is wrong answer ")
+        print("The correct answer is 'vetican city' ")
+        score += 0
+        # print("Your score is ", score)    
+
+print("\n")
+print(f"Here you completed your quiz and your final score is {score}/3")
+
+
+# ------------------ 5 QUESTION QUIZ ------------------------------------------------------
+# ------------------ 5 QUESTION QUIZ ------------------------------------------------------
+if ques == '5':
+    print("\n")
+    print("++++++++++++++++++++++++++ Let's Begin ++++++++++++++++++++++++++++++++")
+    print("\n")
+    print("Your quiz consist of total of 5 questions")
+    print("for each correct answer '1' point is rewarded and '0' for incorrect")
+
+
+    print("\n")
+    print("***********************************************************************")
+    print("\n")
+    print("Question 1: Mathew's father has three sons- Joseph I and Joseph II. Can you guess the name of the third son? : ")
+    print(''' a) Joseph III             b) Edwin            c) Mathew ''')
+    answer = input("Enter a,b or c : ")
+    if answer.lower == "a":
+        print("yeahhh...You guessed it right ")
+        score += 1
+        # print(f"Here you completed your quiz and your final score is {score}/5")
+
+    else:
+        print("Ooh no, it is wrong answer ")
+        print("The correct answer is 'Joseph III' ")
+        score += 0
+        # print(f"Here you completed your quiz and your final score is {score}/5")
+
+
+    print("\n")
+    print("***********************************************************************")
+    print("\n")
+    print("Question 2: The answer is really big. ")
+    print(''' a) Really big             b) The answer            c) The elephant ''')
+    answer = input("Enter a,b or c : ")
+    if answer.lower == "b":
+        print("yeahhh...You guessed it right ")
+        score += 1
+        print(f"Here you completed your quiz and your final score is {score}/5")
+
+    else:
+        print("Ooh no, it is wrong answer ")
+        print("The correct answer is b ")
+        score += 0
+        # print(f"Here you completed your quiz and your final score is {score}/5")
+
+        
+    print("\n")
+    print("***********************************************************************")
+    print("\n")
+    print("Question 3: Half of 2 + 2 =?: ")
+    print(''' a) 3             b) 2            c) 7 ''')
+    answer = input("Enter a,b or c : ")
+    if answer == "3":
+        print("yeahhh...You guessed it right ")
+        score += 1
+        # print(f"Here you completed your quiz and your final score is {score}/5")
+
+    else:
+        print("Ooh no, it is wrong answer ")
+        print("The correct answer is '3' ")
+        score += 0
+        # print(f"Here you completed your quiz and your final score is {score}/5")
+   
+            
+    print("\n")
+    print("***********************************************************************")
+    print("\n")
+    answer = input("Question 4: What will you actually find at the end of every rainbow? ")
+    if answer.lower == "w":
+        print("yeahhh...You guessed it right ")
+        score += 1
+        # print(f"Here you completed your quiz and your final score is {score}/5")
+
+    else:
+        print("Ooh no, it is wrong answer ")
+        print("The correct answer is 'the letter 'w' ' ")
+        score += 0
+    # print(f"Here you completed your quiz and your final score is {score}/5")  
+            
+    print("\n")
+    print("***********************************************************************")
+    print("\n")
+    answer = input("Question 5: What has four eyes but can’t see? ")
+    if answer.lower == "mississippi":
+        print("yeahhh...You guessed it right ")
+        score += 1
+        # print(f"Here you completed your quiz and your final score is {score}/5")
+
+    else:
+        print("Ooh no, it is wrong answer ")
+        print("The correct answer is 'mississippi' ")
+        score += 0
+        # print(f"Here you completed your quiz and your final score is {score}/5")  
+
+    print("\n")
+    print(f"Here you completed your quiz and your final score is {score}/5")
+
+# if ques == '10':
+#     print("\n")
+#     print("++++++++++++++++++++++++++ Let's Begin ++++++++++++++++++++++++++++++++")
+#     print("\n")
+#     print("Your quiz consist of total of 10 questions")
+#     print("for each correct answer '1' point is rewarded and '0' for incorrect")
+
+else:
+    print("Oops, you entered wrong key ")
+
+print("If you want to play this again then run it again :> ")

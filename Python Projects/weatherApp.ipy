@@ -1,0 +1,13 @@
+import requests
+import os
+from datetime import datetime
+
+user_api = os.environ['current_weather_data']
+location = input("Enter the city name : ")
+
+# my_email = os.environ['my_email']
+# my_pass = os.environ['my_pass']
+
+# print("my email is: ", my_email)
+# print("password : ", my_pass)
+# print("my password for {} is : {} ".format(my_email, my_pass))

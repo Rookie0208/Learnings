@@ -1,0 +1,69 @@
+# import all the functions from tkinter
+import configparser
+from tkinter import *
+# 
+from configparser import ConfigParser
+from tkinter import font
+''' importing message box for wrong execution of the text field
+agar search box mai kuch nhi dala or search kar diya
+ya kuch galat daal diya toh pop show hoga correct karne ke liye
+'''
+from tkinter import messagebox
+# request is used to get access with the various api's
+import requests
+
+url_api = "http://api.openweathermap.org/data/2.5/weather?q={}&appid={}"
+# read apiKey from another file and store it 
+api_file = 'weather.key'
+# configparser is used to read the api key from apiKey
+file_a = ConfigParser()
+file_a.read(api_file)
+api_key = file_a['api_key']['key']
+
+def weather_find(city):
+    final = requests.get(url_api.format(city, api_Key))
+    if final:
+        json_file = final.json()
+        city = json_file['name']
+        country = json_file['sys']['country']
+        k_temperature = json_file['main']['temp']
+        c_temperature = k_temperature - 273.15
+        f_temperature = (c_temperature) * 9/5 + 32
+        weather_display = json_file['weather'][0]['main'] 
+        result = (city,country,c_temperature,weather_display)
+        return result
+    else:
+        return None
+
+def print_weather():
+    city = search_city.get()
+    weather = weather_find(city)
+    if weather:
+        location_entry['text'] = '{}, {}'.format(weather[0], weather[1])
+        temperature_entry['text'] = '{:.2f}, {:.2f} F'.format(weather[2], weather[3])
+        weather_entry['text'] = weather[4]
+
+
+    else:
+        messagebox.showerror('Error', 'Please enter a valid city ')
+
+root = Tk()
+root.title("Weather App")
+root.config(bg="#508eaf")
+root.geometry("700x400")
+
+# this search_city is a variable to storre stringvar data type
+# search_city will only take string values
+search_city = StringVar()
+# textvariable is used to take input from the search_city variable
+enter_city = Entry(root, textvariable=search_city, font="poppins 15 bold", fg="black")
+enter_city.pack()
+
+search = Button(root,font="roboto 10 bold", fg="dark blue", background="blue", command=print_weather)
+search.pack()
+# add search button with text font fg and bg
+# OUTPUT contains - city name, country name, temperature
+# add label for location with for location with font, text, fg
+# add label for temperature with fond, bg color
+# add api and api key
+root.mainloop()

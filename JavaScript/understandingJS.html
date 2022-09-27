@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="understandingJS.js"></script>
+        <title> Learning javascript</title>
+        <h1>Here starts the head tag.</h1>
+        <h2>Here we used the internal js</h2>
+        <script>
+            document.write("we can use js either in the head tag or in the body tag. <br>");
+            document.write("This code is written in the head tag.");
+            
+        </script>
+        <style> 
+        .hero-button {
+            display: inline-block;
+            text-decoration: none;
+            color: rgb(13, 43, 54);
+            padding: 12px 34px;
+            border: 1px solid #fff;
+            border-radius: 4px;
+            font-size: 13px;
+            position: relative;
+            cursor: pointer;
+        }
+        .hero-button:hover {
+            border: 1px solid #23b7f1;
+            background: #27fdfd;
+            transition: .5s;
+        }
+        </style>
+    </head>
+    <body>
+        <h1>here starts the body tag</h1>
+        <h1 id="game">inner html</h1>
+        <!-- <h2><button onclick="hello()"> click this button</button> </h2>
+        <h2><button ondblclick="hello()">double click </button></h2>
+        <h2><button oncontextmenu="hello()">right click </button></h2>
+        <!- <h2><button onmouseenter="hello()">mouse hover</button></h2> -->
+        <!-- <h2><button onmousedown="hello()">mouse down</button></h2>
+        <h2><button onmouseup="hello()">mouse up </button></h2>
+        <h2><button onmouseout="hello()">mouse </button></h2> -->
+        <!-- KEYBOARD WALE SAARE BUTTON BODY TAG MAI HE KAAM KARENGE. -->
+        <!-- <h2><button onkeydown="hello()">key down</button></h2>
+        <h2><button onkeypress="hello()">key press</button></h2>
+        <h2><button onkeyup="hello()">key up</button></h2> -->
+        <!-- <load="hello()">       ye wale function body tag ke andar use honge
+        <unload="hello()">          eg : <body onscroll="hello()">
+        <onscroll="hello">
+        <onresize="hello()"> --> 
+            <h2><button class="hero-button" onclick="loop()">while loop</button></h2>
+            <h2><button class="hero-button" onclick="loop2()">for loop</button></h2>
+            <h2><button class="hero-button" onclick="num()">print no.</button></h2>
+            <h2><button class="hero-button" onclick="pattern()"> print pattern</button></h2> 
+            <h2><button class="hero-button" onclick="pattern2()"> print pattern2</button></h2> 
+            <h2><button class="hero-button" onclick="pattern3()"> print pattern3</button></h2> 
+            <h2><button class="hero-button" onclick="pattern4()"> print pattern4</button></h2> 
+        <script>
+            document.write("This code is inside the body tag.<br>");
+            document.write("<i>js mai code ko dynamically run karne ke liye issi ke andar <b>html</b> tags ko use karte hai.</i>")
+        </script>
+    </body>
+</html>

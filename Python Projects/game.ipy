@@ -1,0 +1,40 @@
+import random
+
+choices = ['rock', 'paper', 'scissor']
+user_points = 0
+computer_points = 0
+
+while True:
+    user = input(" type rock/paper/scissor or q to quit ")
+    # computer_choice = random.choice(choices)
+    random_number = random.randint(0, 2)
+    computer_choice = choices[random_number]
+
+    if user == 'q':
+        quit()
+        break
+    if user not in choices:
+        continue
+
+    if user == computer_choice:
+        print("it's a tie ")
+    elif user == 'rock' and computer_choice == 'scissor':
+        print("computer chooses", computer_choice)
+        print("hurray! you win")
+        user_points += 1
+    elif user == 'rock' and computer_choice == 'paper':
+        print("computer chooses", computer_choice)
+        print("hurray! you win")
+        user_points += 1
+    elif user == 'scissor' and computer_choice == 'paper':
+        print("computer chooses", computer_choice)
+        print("hurray! you win")
+        user_points += 1
+    else:
+        print("computer chooses", computer_choice)
+        print("computer wins ")
+        computer_points += 1
+    print(f"computer_points = {computer_points} and user_points = {user_points}")
+    
+
+

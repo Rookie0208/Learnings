@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Redressed&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=josefin+Sans&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'josefin Sans', sans-serif;
+    color: #fff;
+}
+body {
+    background: black;
+}
+header {
+    width: 80%;
+    height: 15vh;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo {
+    display: flex;
+    align-items: center;
+    font-size: 1.8rem;
+}
+.logo img {
+    width: 30px;
+    height: 30px;
+    border: 2px solid white;
+    border-radius: 50%;
+}
+.logo p {
+    margin-left: 10px;
+    font-family: 'Redressed', cursive;
+    text-decoration: underline #f44336;
+}
+/* .logo p span {
+    color: rgb(165, 165, 165);
+} */
+nav {
+    display: flex;
+}
+nav .fa {
+    display: none;
+}
+nav a {
+    margin: 10px;
+    font-size: 1.2rem;
+    text-decoration: none;
+    color: white;
+    transition: all .2s;
+}
+nav a:hover {
+    color: rgb(165, 165, 165);
+}
+
+/* RESPONSIVINESS */
+ @media (max-width: 800px) {
+     nav .fa {
+         display: block;
+         cursor: pointer;
+        margin: 10px;
+        font-size: 22px;
+        cursor: pointer;
+     }
+     nav .menu {
+         display: flex;
+         flex-direction: column;
+            position: absolute;
+            /* position ko fix kar diya */
+            background: #000000;
+            height: 100vh;
+            /* pure screen ki height di hai */
+            width: 200px;
+            /* thoda chauda kar diya hai navigation bar ko */
+            top: 0px;
+            /* top se jagah nhi bachai */
+            right: -200px;
+            /* -200px kiya hai taaki chote screen pe wo hide ho jaaye */
+            text-align: left;
+            /* saare links ko left align kar diya hai */
+            z-index: 2;
+            /* opacity badha di hai */
+            transition: 0.9s;
+     }
+ }
+/* FOOTER */
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    padding: 30px 0;
+}
+.footer h4 {
+    margin-bottom: 25px;
+    margin-top: 20px ;
+}
+.icons .fa {
+    /* color: #f44336; */
+    margin: 8px;
+    cursor: pointer;
+    padding: 18px ;
+    transition: 0.3s;
+}
+.icons .fa:hover{
+    color: black;
+    background: white;
+    border-radius: 2px;
+
+}
+.fa-heart-o {
+    color: #f44336;
+}

@@ -1,0 +1,33 @@
+# digital visiting card
+from tkinter import *
+import tkinter
+from typing import Sized
+
+# click function
+def click():
+    entered_text = key.get()        # collect the text from text entry box
+
+root = tkinter.Tk()
+# title
+root.title("ICIT")
+# dimensions of the window
+root.geometry("400x200")
+# configuration and geometry
+root.config(width=400, height=200, background="#508eaf")
+
+# label
+name = tkinter.Label(root, background="#508eaf", text="My personal dictonary", font="poppins 15 bold", foreground="white")
+name.pack(pady=9)
+
+# entry box
+box = tkinter.Entry(root, width=50)
+box.pack()
+
+# submit button
+key = tkinter.Button(root, text="submit", width=10, command="click")
+key.pack(pady=15)
+
+# 2nd entry box
+box1 = Label(root, text = "\nDefination", width=50, height=10, bg="white", font="none 10 bold")
+box1.pack()
+root.mainloop()

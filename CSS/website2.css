@@ -1,0 +1,176 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+/* body {
+    width: 100vw;
+    height: 100vh;
+    color: #fff;
+} */
+main {
+    height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(0,168,255,0.3), rgba(0,168,255,0.3)), url(../../photos/computer.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    clip-path: polygon(100% 0%, 100% 77%, 50% 100%, 0 75%, 0 0);
+    position: relative;
+}
+main:before {
+    content: "";
+    position: absolute;
+    top: 0%;
+    bottom: 0%;
+    right: 0%;
+    left: 0%;
+    opacity: 0.3;
+    z-index: -1;
+    background: linear-gradient(to right, #1e5799 0%, #3ccdbb 0%, #16c9f6 100%);
+}
+ .nav_bar {
+     width: 100;
+     height: 8vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px;
+    background-image: linear-gradient(rgba(0,168,255,0.3), rgba(0,168,255,0.3)), url(../../photos/computer3.jpg);
+    background-size: 100% ;
+    /* background: black; */
+    opacity: 0.9;
+   
+}
+.title {
+    color: white;
+    text-transform: uppercase;
+    padding-right: 40%;
+}
+.navigation_bar {
+    width: 40vw;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.nav_bar::before{
+    content: "";
+    position: absolute;
+    top: 0%;
+    bottom: 0%;
+    right: 0%;
+    left: 0%;
+    opacity: 0.3;
+    z-index: -1;
+    background: linear-gradient(to right, #1e5799 0%, #3ccdbb 0%, #16c9f6 100%);   
+}
+.navigation_bar a {
+margin-left: 40px;
+text-transform: uppercase;
+text-decoration: none;
+color: white;
+}
+
+main {
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    
+}
+.main {
+    text-transform: capitalize;
+    color: #fff;
+    
+}
+.main h1 {
+    text-align: center;
+    font-weight: 900;
+    margin-bottom: 25px;
+    font-size: 3.5rem;
+}
+.main h3 {
+margin-bottom: 20px;
+/* font-size: 1.3rem; */
+line-height: 1.3rem;
+text-align: center;
+color: #606060;
+font-weight: 400;
+}
+.main {
+    position: relative;
+}
+
+.main .about, .contact {
+    color: white;
+    padding: 10px 15px;
+    text-decoration: none;
+    border: 1px solid white;
+    border-radius: 15px;
+   
+}
+
+.btn {
+    position: absolute;
+    top: 120%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+}
+
+.main .about:hover, .contact:hover {
+    color: #50d1c0;
+    background: #fff;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.3);
+}
+
+/* ****************************** HERE WE START THE EXTRA DIV ***************************** */
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    text-align: center;
+    width: 100%;
+    height: auto;
+    margin: 100px 0;
+}
+.box {
+    background: #fff;
+    border: medium none;
+    padding: 50px!important;
+    border-radius: 3px;
+    transition: 0.4s;
+}
+.box h2 {
+    font-size: 0.9rem;
+    font-weight: bold;
+    margin: 20px 0 15px 0;
+    line-height: 1.1;
+    word-spacing: 4px;
+}
+.box:hover {
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.3);
+    transform: translateY(-20px);
+    /* translate y is for poping it up in y direction */
+}
+
+
+/* *******************************  what we offer ******************************* */
+
+.center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.icon {
+    margin: 10px;
+    padding-right: 10px;
+}
+.right {
+    display: flex;
+}
+
+/* <div class="progress-bar progress-bar-striped progress-bar-animated" style="width: 25%">100%</div> */

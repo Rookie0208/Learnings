@@ -1,0 +1,60 @@
+# '''
+# this program is totally based on the string slicing
+# we sliced the email address from starting index to the '@' to get the username
+# and '@' + 1 for the domain name
+# '''
+
+# email = input("Enter your email address: ")
+# domain = email[email.index('@')+1:]
+# username = email[:email.index('@')]
+
+# print(f"Your email address is {email}")
+# print(f"Your user name is {username}")
+# print(f"Your domain is {domain}")
+
+# year = 2020
+# if year <= 1500:
+#     print('happy christmas')
+# else:
+#     print('merry christmas')
+
+'''
+m
+e
+r
+r
+y
+.
+c
+h
+r
+i
+s
+t
+m
+a
+s
+'''
+
+
+
+print("                ^^")
+print("               /MM\\")
+print("              /EEEE\\")
+print("             /RRRRRR\\")
+print("            /RRRRRRRR\\")
+print("           /YYYYYYYYYY\\")
+print("          /............\\")
+print("         /CCCCCCCCCCCCCC\\")
+print("        /HHHHHHHHHHHHHHHH\\")
+print("       /RRRRRRRRRRRRRRRRRR\\")
+print("      /IIIIIIIIIIIIIIIIIIII\\")
+print("     /SSSSSSSSSSSSSSSSSSSSSS\\")
+print("    /TTTTTTTTTTTTTTTTTTTTTTTT\\")
+print("   /MMMMMMMMMMMMMMMMMMMMMMMMMM\\")
+print("  /AAAAAAAAAAAAAAAAAAAAAAAAAAAA\\")
+print(" /SSSSSSSSSSSSSSSSSSSSSSSSSSSSSS\\")
+print("/++++++++++++ TTTTTT ++++++++++++\\")
+print("||||||||||||| OOOOOO |||||||||||||")
+print("              AAAAAA")
+print("              LLLLLL")

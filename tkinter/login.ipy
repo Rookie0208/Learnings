@@ -1,0 +1,35 @@
+from tkinter import *
+from tkinter import ttk
+from tkinter import messagebox
+
+root=Tk()
+root.geometry("400x400")
+root.title("Login Page")
+root.resizable(0,0)
+root.config(bg="black")
+
+def login_fxn():
+	user=username.get()
+	passw=pwd.get()
+	if (user=="amit" and passw=="123"):
+		messagebox.showinfo("Success","Login Success!")
+	else:
+		messagebox.showerror("error","Login Failed!")
+
+Label(text="** LOGIN PAGE **",font=("Arial",15),bg="black",fg="yellow").place(x=110,y=50)
+
+frame=Frame(root,bg="black")
+frame.place(x=40,y=100)
+
+Label(frame,text="Username",bg="black",fg="cyan",font=("Helvetica",12)).grid(row=0,column=0,padx=20,pady=10)
+Label(frame,text="Password",bg="black",fg="cyan",font=("Helvetica",12)).grid(row=1,column=0,padx=20,pady=10)
+
+username=ttk.Entry(frame,font=1)
+username.grid(row=0,column=1)
+
+pwd=ttk.Entry(frame,show="*",font=1)
+pwd.grid(row=1,column=1)
+
+ttk.Button(frame,text="Login",cursor="hand2",command=login_fxn).grid(row=2,column=1,pady=10)
+
+root.mainloop() 

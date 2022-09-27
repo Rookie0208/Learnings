@@ -1,0 +1,44 @@
+# program to make a guess game
+import random
+# num = random.randint(1, 10)
+# print("you have only three attempts :" )
+# for i in range(0,3):
+#     user = int(input("Enter a number : "))
+#     if user == num:
+#         print(("You guessed correct and the number is : ", num))
+#         break
+#     if user != num:
+#         print("Sorryy, You guessed incorrect")
+# if(user != num):
+#     print("The correct number is : ", num)
+
+# GUESS GAME 2
+guesses = 0
+num = random.randint(1,10)
+
+while True:
+    user = int(input("Enter a number : "))
+    guesses += 1
+    if user == num:
+        print("yeahh, you guessed it correct")
+        break
+    else:
+        print("you got it wrong ")
+print("you got it in", guesses,"guesses")
+
+# program to roll a dice
+# while 1:
+#     print("1 for roll a dice        2 for exit")
+#     user = int(input("Select any one number: "))
+#     if user==1:
+#         num = random.randint(1,6)
+#         print("your number is : ", num)
+#     else:
+#         print("you exited : ")
+#         break
+
+# RANDOM PASSWORD GENERATOR
+# passlen = int(input("Enter the length of the password : "))
+# s = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890!@#$%^&*()_+~-,./';[]\|}{:?><"
+# p = "".join(random.sample(s,passlen))
+# print(p)

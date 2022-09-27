@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/css/fontawesome.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>javascript full course</title>
+    <style>
+        #game {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 20px;
+        }
+        .bt, .rst{
+            height: 100px;
+            width: 100px;
+            padding: 5px;
+            margin-left: 8px;
+            cursor: pointer;
+        }
+    </style>
+
+</head>
+<body>
+    <h1>here we will learn javascript</h1>
+    <script src="/PlayGround javascript/playGround.js"></script>
+    <i class="fa-solid fa-merge"></i>
+    <div class="icon center">
+        <a href="https://www.instagram.com/amitrawat0208/" target="_blank"><i class="fa fa-instagram fa-3x"></i></a>
+        
+        <i class="fa fa-github fa-3x"></i>
+        <i class="fa fa-twitter fa-3x"></i>
+    </div>
+
+    <div id='title'><strong>Hello</strong> <em>bro</em></div>
+    <div id="container" style="color: blue;">Let's have some <span>fun</span>.</div>
+
+    <div id="game">
+        <button id="stone" class="bt" title="stone" value="red"> red </button>
+        <button id="paper" class="bt" title="paper" value="blue"> blue </button>
+        <button id="scissor" class="bt" title="scissor" value="green"> green </button>
+        <button id="reset" class="rst" title="reset" value="reset"> reset </button>
+    </div>
+      
+    <script>
+        document.getElementById('container').style.color = 'orange';
+
+        // document.getElementById('stone', 'paper', 'scissor');
+        // stone.onclick = () => {
+        //     stone.style.color = 'red';
+        // }
+        // paper.onclick = () => {
+        //     paper.style.color = 'blue';
+        // }
+        // scissor.onclick = () => {
+        //     scissor.style.color = 'green';
+        // }
+
+        // ANOTHER METHOD OF DOING THIS IS BY USING FUNCTIONS WITH THE HELP OF CLASS.
+        const btn = document.querySelectorAll('.bt')
+        // btn.forEach(btn => console.log(btn.value))      // it will iterate through the btn class and print the value assigned to them.
+        // btn.forEach(bt => {
+        //     bt.onclick = () => console.log(bt.value)
+        // })
+
+        let timesClicked = {'red': 0, 'blue': 0, 'green': 0};
+        btn.forEach(bt => {
+            bt.onclick = () => {
+                timesClicked[bt.value] += 1;
+                bt.innerText = timesClicked[bt.value]
+            }
+        })
+        // function clear() {
+        //     btn.forEach(bt => {
+        //         timesClicked[bt.value] = 0
+        //         bt.innerText = bt.value;
+        //     })
+        // }    // additional extra function for reseting the values.
+        const rst = document.getElementById('reset')
+        rst.onclick = () => {
+            btn.forEach(bt => {
+                timesClicked[bt.value] = 0;
+                bt.innerText = bt.value;
+            })
+        }
+    </script>
+</body>
+</html>

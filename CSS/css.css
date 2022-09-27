@@ -1,0 +1,65 @@
+/* RESET PROPERTIES */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* BODY */
+body {
+    font-family: "Gill Sans", sans-serif;
+    background-color: aquamarine;
+    height: 100vh;
+    display: flex;
+    justify-content:  center;
+    align-items: center;
+}
+
+/* HERE WE HAVE TEXT CONTAINER */
+.text-container {
+    font-weight: 600;
+    font-size: 4rem;
+    padding: 40px;
+}
+
+span{
+    animation: span 3s ease-in infinite alternate;
+}
+
+.letter {
+    display: inline-flex;
+    height: 45px;
+    width: 40px;
+    border: 8px solid rgb(255, 255, 255);
+    animation: letter 3s ease-in-out infinite alternate;
+    border-radius: 15px;
+}
+
+/* LETTER KEYFRMAE */
+@keyframes letter {
+    0%,
+    30% {
+        width: 27px;
+    }
+    70%,
+    100% {
+        width: 20vw;
+    }
+}
+
+/* SPAN KEYFRAMS */
+@keyframes span {
+    0%,
+    30% {
+        margin: 0 10px;
+    }
+    70%,
+    100% {
+        margin: 0 5px;
+    }
+    
+}
+
+div {
+    border-color: rgb(255, 255, 255);
+}

@@ -1,0 +1,34 @@
+import turtle
+import colorsys
+
+t = turtle.Turtle()
+s = turtle.Screen()
+s.bgcolor("black")
+t.speed(0)
+n = 10       # n is for number of color
+h = 0
+
+for i in range(80):
+    c = colorsys.hsv_to_rgb(h,1,0.8)    #makes the color combinations
+    h = h + 1/n
+    t.color(c)      #this is to apply the color
+    t.circle(90)
+    # t.goto(0,0)
+    t.left(5)      #decides the gap between every circle
+    # t.forward(10)
+    # t.forward(i*20)    #decides the size of the shape
+
+# t.speed(50)
+# colors = ('white', 'pink', 'magenta', 'purple', 'red')
+
+# for i in range(50):
+#     c = colorsys.hsv_to_rgb(h,1,0.8)    #makes the color combinations
+#     h = h + 1/n
+#     t.color(c)
+#     # t.pencolor(colors[i%5])
+#     t.width(i/100+1)
+#     # t.goto(0,0)
+#     t.pendown
+#     t.forward(100)
+#     t.right(59)
+#     t.forward(200)
