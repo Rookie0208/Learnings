@@ -1,0 +1,118 @@
+TYPES OF ATTACKS :
+
+Operating system attacks : jab OS mai kuch vulnerabilities mil jaaye, uske code mai ya koi loop hole, ya koi patch toh usse OS Attack kehte hai.
+
+Misconfiguration Attack : default configuration ki wajah se jo attacks hote hai, wo iss category mai aate hai. Eg. router ka default username and password, admin, admin hota hai.
+
+Application level attack : ye waale attcks web applications pe hote hai, attcks jese sql injection, website cross scripting inhi par hote hai.
+
+Shrink wrap code attack : vulnerabilities pta hone ke baad bhi unka patch release nhi hua ya bugs ko theek nhi kiya or uske baad agar unpar attack hota hai toh usse shrink wrap code attack kehte hai.
+
+
+NETWORKING :
+
+Source ip - from where the packet is generated.
+Destination ip - to where the packet is sent.
+
+Adress Resolution Protocol - router pta lagata hai ki usse kon kon connected hai.
+
+
+TYPES OF NETWORKS IN NETWORKING: 
+LAN - Local Area Network - ghar ka router
+MAN - Metroplitian Area Network - sirf ek ghar mai nhi balki multiple areas jese ghar, organisation etc.
+WAN - Wide Area Network - apna INTERNET.
+
+
+IP - Internet Protocol
+[ 17.172.224.47 ] : total 4 bytes ka hoga, hrr ek part 1 byte ka.
+[17]  : 1st part tells about the COUNTRY.
+[172] : 2nd part tells about the STATE.
+[224] : 3rd part tells about the ISP.
+[47]  : 4th part tells about the DEVICE.
+
+IPv4 : 32 bit number and can generate 2^32 i.e. 4.7 billion addresses.
+due to increase in internet devices, IPv4 fails to generate the more than 4.7 billion addresses, that's why IPv6 introduced.
+
+IPv6 : 128 bit number and can generate 2^128 i.e. 340 trillion, trillion, trillion addresses.
+inka representation bhi alag hota hai. (hexadecimal code mai)
+
+Types of IP address :
+
+PULBIC : wo WAN mai IP jayegi wo humesha public ip hogi.
+jo publicily sabko available hogi just like our adhar card or pan card.
+e.g. jis mobile ka hotspot on hoga, uss mobile ka ip public ip ki tarah work karega or connected devices ke liye gateway ka kaam karega.
+
+PRIVATE : jo ip router provide karega wo hogi private ip or iska ek local area ke bahar koi wajood nhi hota.
+
+STATIC : ye ip change nhi hoti, just like our ghar ka address. koi website jese ki google, jo traffic generate karne ke liye static ip ka use karti hai.
+
+DYNAMIC : hamare phones mai dynamic ip hoti hai, ye ek priod of time par change hoti hai, ya kabhi reboot hone ke baad, ya sim change karne par.
+
+
+OSI MODEL : Open System Interconnection Model
+Helps to simulate a standardize commnunication.
+It consist of 7 layers.
+APPLICATION 	- transportation of resources.
+PRESENTATION 	- data manipulation/formatting like zip file mai convert karna, compress karna and encryption/decryption.
+SESSION 	- creates a session between connected system, which are sharing the data. authenticate the user, reconnection. 
+TRANSPORT 	- gives us the acknowledgement dega ki data safely transfer ho gya ya receive ho gya.
+NETWORK 	- address resolution ka kaam karta hai, kis destination ip par data send karna hai kaha se receive karna hai and so on.
+DATA LAYER 	- errors jo generate hongi, un par kaam karegi.
+PHYSICAL 	- bit streaming, data ka flow yhi se shuru hoga.
+
+TCP/IP MODEL : Transmission Control Protocol/Internet Protocol
+This is a Practical version of OSI model.
+Works over WAN.
+Consist of 4/5 layers.
+APPLICATION 	- application + presentation + session of OSI
+TRANSPORT 	- same
+INTERNET	- same as Network
+NETWORK ACCESS 	- data layer + physcial
+
+
+NETWORK PROTOCOL :
+These are some set of rules, which tells how data is transmitted through network.
+Helps in data communication.
+
+Types of Protocol :
+APPLICATION - Telnet, SMTP, POP3, FTP, NTP, HTTP, SNMP, DNS, SSH many more...
+Transport - TCP, UDP
+INTERNET - IP, ICMP, ARP, DHCP
+NETWORK - Ethernet, PPP, ADSL
+
+TCP contains 6 FLAGS 
+URG (urgent) - data contained in this packet should be processed immediately.
+FIN (finish) - no more data transmission.
+RST (reset) - resets a connection.
+PSH (push) - sends all buffered data immediately.
+ACK (acknowledgement) - acknowledges the receipt of a packet.
+SYN (synchronize) - initiate a connection between hosts. Responsible for establishing the connection.
+
+TCP wireless network mai hota hai. and is a three way handshake process.
+UDP wired network mai hota hai. and is a one way handshake process.
+
+
+DOMAIN NAME :
+kisi server ki ip ka name he domain name hota hai.
+ip itni saari yaad nhi kar skte ussi ko easily yaad karne ke liye domain name diya jata hai.
+
+DNS is the adddress book of Internet.
+
+ZONE file is a text file which stores all the data which a domain required to connect to server.
+It is an intermediate between domaain and ip.
+Hrr 4 ghante mai update hoti hai.
+zone file bhi ek name server se connect hoti hai, so that we can easily access it.
+
+Ek client jo request generate karta hai wo uss request mai kaafi information server tak le jata hai. jese :
+host : jiske domain ko request bhji jaa rhi hai wo host hoga.
+acceptable language (en-us),
+acceptable image/gif/jpeg etc,
+acceptable encoding (gzip,deflate),
+user-agent : isme kon sa broweser hai, version, os, windows ya linux ya mac.
+content lenght : total kitne length ka content bheja hai request information mai.
+
+TYPES OF REQUEST METHOD :
+GET : data tranfer through URL, that means agar login id password bhi daal rhe hai toh wo bhi url mai he show hoga, jo bilkul bhi secure nhi hai.
+HEAD : similar to GET but isme sirf status line and header section he transfer hota hai.
+POST : more secure than the GET because isme sara data HTML forms mai transfer hota hai jo easliy read nhi kar skte.
+PUT : jo bhi nya content upload hoga, usse purana content ko replace kar dega.

@@ -1,0 +1,29 @@
+
+Official Github REPO (🌟 Go Star This ♥️)
+👉 JavaScript Course by Clever Programmer (Github Repo)
+
+Let's get this trending 🚀
+
+Lessons
+DOM - Red Yellow Green Squares
+API - Get Random Dog
+API - Get Super Heroes
+Classes - Bank with Deposit & Withdraw Methods
+Project Exercises
+Stopwatch
+Rock Paper Scissors
+Figthing Game
+Tip Calculator
+Weather App
+Advanced Weather App
+Create Netflix
+
+
+Project Solutions
+Stopwatch
+Rock Paper Scissors
+Fighting Game
+Tip Calculator
+Weather App
+Advanced Weather App
+Create Netflix

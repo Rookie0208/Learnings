@@ -1,0 +1,31 @@
+echo "# htmlCodes" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/Rookie0208/htmlCodes.git
+git push -u origin main
+
+…or push an existing repository from the command line
+git remote add origin https://github.com/Rookie0208/htmlCodes.git
+git branch -M main
+git push -u origin main
+
+
+
+How to add and push the codes...
+git init --> to add the .git file in that repo
+git add * --> will add all the files in the commited section
+git commit -m"msg"
+git branch -M main
+git remote add origin 'link'
+git push -u OR git push -u origin main
+
+
+PULL RQST:
+1. fork the repo
+2. copy the link
+3. open git bash in a specific folder
+4. type :
+	git clone 'copied link' (not in bracket)
+
