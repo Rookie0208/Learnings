@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Quiz</string>
+    <string name="Question_1"><b>Q1.</b>Vedanta and Foxconn signed memorandums of understanding (MoUs) with the which State government to set up a semiconductor manufacturing facility with an investment of Rs. 1.54-lakh crore?</string>
+    <string name="Question_2"><b>Q2.</b>\'Early Intervention Centre-Prayas\' inaugurated at Army Hospital in which city?</string>
+    <string name="Question_3"><b>Q3.</b>Lok Sabha Speaker Om Birla and Minister of State for Defence Ajay Bhatt have inaugurated the National Defence MSME Conclave and Exhibition in which city?</string>
+    <string name="Question_4"><b>Q4.</b>Ministry of Ports,Shipping and Waterways is building the National Maritime Heritage Complex at which city?</string>
+    <string name="Question_5"><b>Q5.</b>Who will be taking over as the Attorney General(AG) of India from 1 October,after the current AG KK Venugopal?</string>
+</resources>
