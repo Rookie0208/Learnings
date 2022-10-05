@@ -29,3 +29,11 @@ PULL RQST:
 4. type :
 	git clone 'copied link' (not in bracket)
 
+If throwing error like :
+ ! [rejected]        main -> main (fetch first)
+error: failed to push some refs to 'https://github.com/Rookie0208/Learnings.git'
+
+do this :
+$ git fetch origin/main
+$ git pull -r
+$ git push -u origin main
