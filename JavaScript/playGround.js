@@ -319,3 +319,26 @@ const addNetWorth = actors.reduce((a,b) => a + b.netWorth, 0)
 // console.log(title.innerText)
 // document.getElementById('container')
 // container.style.color = "red"
+
+
+// RANDOM FUNCTION :
+const randomName = () => {
+   const randomNumber = Math.floor(Math.random() * names.length)
+   return names[randomNumber];
+}
+
+let names = ['depp', 'johny', 'iron_man', 'Captain_america', 'Tom_holland', 'Spider_man']
+// console.log(randomName())
+
+const weatherScore = (weather) => {
+   let score = Math.floor(Math.random() * weather.length)
+   if(score == 0) {
+      console.log('1')
+   } else if(score == 1) {
+      console.log('-1')
+   } else if(score == 2) {
+      console.log('0')
+   }
+}
+let weather = ['rainy', 'sunny', 'overcase']
+weatherScore(weather);

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game</title>
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="./RPSscript.js"></script>
+</head>
+<style>
+    * {
+        margin: 0%;
+        padding: 0%;
+        box-sizing: border-box;
+    }
+
+    .container {
+       position: absolute;
+       top: 50%;
+       left: 50%;
+       transform: translate(-50%, -50%);
+    }
+
+.btn {
+    padding: 25px;
+    margin: 15px;
+    cursor: pointer;
+    border: none;
+    background: #fff3f3;
+    box-sizing: border-box;
+    transition: 0.5s;
+}
+
+.btn:hover {
+    box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.2);
+}
+
+.title {
+    display: flex;
+    justify-content: center;
+}
+
+.result {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+  /* FOOTER */
+.footer {
+    transform:translateY(230%);
+    width: 100%;
+    text-align: center;
+    margin-bottom: 10px;
+    padding: 30px 0;
+}
+.footer h4 {
+    margin-bottom: 25px;
+    margin-top: 20px ;
+}
+.icons .fa {
+    color: #f44336;
+    margin: 0 13px;
+    cursor: pointer;
+    padding: 18px 0;
+    border-radius: 25px;
+    transition: all 1s;
+}
+
+.fa:hover {
+    transform: rotate(360deg); 
+    animation: 2s display forwards;
+}
+
+.fa-heart-o {
+    color: #f44336;
+}  
+
+</style>
+<body>
+    <!-- <i class="fa-thin fa-hand-back-fist"></i> -->
+    <!-- <i class="fa-light fa-scissors"></i> -->
+    <div class="container">
+        <h2 class="title"> &nbsp; Stone Paper Scissor Game </h2>
+        <div class="innerContainer">
+    <button class="btn" value="Rock" onclick="onClickBtn(rock)"><i class="fa fa-hand-rock-o"></i></button>
+    <button class="btn" value="paper" onclick="onClickBtn(paper)"><i class="fa fa-hand-paper-o"></i></button>
+    <button class="btn" value="scissor" onclick="onClickBtn(scissor)"><i class="fa fa-scissors"></i></button>
+    <button class="btn" id="reset" onclick="reset()"><i class="fa fa-refresh"></i></button>
+</div>
+        <div class="result">
+        <h2>&nbsp; Points : <h2 id="result">&nbsp; 0</h2></h2>
+    </div>
+    </div>
+    <div class="footer">
+        <h4>About Us
+        </h4>
+        <p>Hii, I am AMIT RAWAT, btech 3rd year computer science student.</p>
+    
+        <div class="icons">
+            <a href="http://www.facebook.com/amitsingh.rawat.777" target="_blank"><i class="fa fa-facebook"></i></a>
+            <a href="http://www.instagram.com/amitrawat0208" target="_blank"><i class="fa fa-instagram"></i></a>
+            <a href="http://www.twitter.com/AmitRawt1" target="_blank"><i class="fa fa-twitter"></i></a>
+            <a href="http://www.linkedin.com/in/amit-rawat-47713020" target="_blank"> <i class="fa fa-linkedin"></i></a>
+                 
+        </div>
+        <p> Made by <i class="fa fa-heart-o">Amit Rawat</i> </p>
+    </div>
+</body>
+<script>
+
+</script>
+</html>

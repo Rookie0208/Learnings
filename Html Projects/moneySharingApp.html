@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Let's divide</title>
+    <style>
+             * {
+        box-sizing: border-box;
+    }
+    
+    body{
+        height: 100vh;
+        color: white;
+        display: flex;
+        font-family: sans-serif;
+    }
+
+    .container {
+        display:flex;
+        flex-direction:column;
+        transform: translate(50%, 50%);
+        background-color: darkslategray;
+        /* justify-content:center; */
+        align-items:center;
+        border: 1px solid grey;
+        border-radius: 4px;
+        padding-top: 30px;
+        box-shadow: 0px 5px 4px rgba(0, 0, 0, 25);
+        font-size: 1rem;
+        
+    }
+    
+input[type="text"],
+input[type="number"],
+select,
+textarea {
+padding: 8px;
+width: 80%;
+border-radius: 5px;
+border: 1px solid black;
+margin: 2px;
+}
+
+#innerContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.btn {
+    cursor: pointer;
+    margin: 3px 3px;
+    padding:5px;
+}
+
+#end {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    /* justify-content: space-between; */
+}
+#result {
+    font-size: 1em;
+}
+    </style>
+</head>
+<body>
+    <div class="container" style="height: 300px; width: 300px;">
+    <form action="#" method="get">
+        Bill total
+        <input type="number" id="firstBox" placeholder="Enter the total amount" onkeyup="calculateBill()"><br>
+        Tip (%)<br>
+        <input type="number" id="secondBox" placeholder="Enter tip"  onkeyup="calculateBill()" > <br>
+        People <br>
+        <div id="innerContainer">
+        <button id="add" class="btn" onclick="increasePeople()">+</button>
+        <p id="people" > 1 </p>
+        <button id="sub" class="btn" onclick="decreasePeople()">-</button>
+    </div>
+        <div id="end">
+        <p> Total per Person </p>
+        <p id="result">Rs 0.00</p>
+        </div>
+    </form>
+</div>
+<script src="./MSAjs.js"></script>
+</body>
+
+</html>
