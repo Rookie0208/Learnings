@@ -9,7 +9,7 @@ using namespace std;
 // OR ISME OVER WRITE NHI HOTI VALUES.
 // MAPS HUMESHA SORTED LIST MAI PRINT HOTE Hai.
 // MAPS MAI COMPARISON KE BASIS PE INSERTION HOTA HAI.
-// printing ke liye ye trees ko use karte hai.
+// printing ke liye ye trees ko use karte hai. (red and black tree)
 
 	// to print the map
 void printMap(map<int,string> &m) {

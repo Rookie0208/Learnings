@@ -76,9 +76,20 @@ function showResult(score, userChoice, computerChoice) {
 }
 
 function onClickBtn(userChoice){
+    console.log({userChoice})
     const computerChoice = randomNum();
+    console.log({computerChoice})
     const score = getResult(computerChoice, userChoice.value)
     showResult(score, userChoice.value, computerChoice)
+}
+
+function game() {
+    const playButton = document.querySelectorAll('.btn')
+    playButton[0].onclick = () => console.log(playButton[0].value)
+
+    playButton.forEach(buttons => {
+        buttons.onclick = () => onClickBtn(buttons.value)
+    });
 }
 
 let reset = () => {
@@ -86,3 +97,5 @@ console.log("reset points.")
 ans = 0;
 point.innerText = ans;
 }
+
+game() 

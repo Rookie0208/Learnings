@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Form</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 10px;
+            margin-right: 70px;
+        }
+
+        body {
+            padding: 10px;
+            color: white;
+            font-size: 400;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            margin: 15px 30px;
+            background-color: rgba(108, 108, 207, 0.801);
+            
+        }
+
+        form {
+            padding: 50px 60px 15px 20px;
+            margin: 20px;
+            border: 1px solid powderblue;
+            background-color: rgba(108, 108, 207, 0.801);
+           }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="number"],
+        textarea {
+            padding: 10px;
+            width: 30%;
+            border: 1px solid cadetblue;
+            border-radius: 7px;
+            margin: 3px;
+            background-color: rgb(248, 230, 230);
+        }
+
+        input[type="submit"] {
+            padding: 5px;
+            border-radius: 7px;
+            border: 1px solid teal;
+            text-align: right;
+            color: blue;
+        }
+
+        input[type="submit"]:hover {
+            color: tomato;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Contact Us</h1>
+        <hr>
+    </header>
+    <main>
+        <section>
+            <div class="information">
+                <p>Please fill all the information carefully.</p>
+            </div>
+            <div class="form">
+                <form action="" method="GET">
+                    <p> Your Name*:
+                        <br> <input type="text" name="name" id="name" placeholder="First Name" required> <br>
+                        <input type="text" name="lastname" id="name" placeholder="Last Name" required>
+                    </p>
+                    <p>Your Email*: <br> <input type="email" name="email" id="email" required
+                            placeholder="e.g. abc@gmail.com"></p>
+                    <p> Phone*: <br> <input type="number" name="phone" id="phone" required placeholder="Mobile number">
+                    </p>
+                    <p>Country*: <br> <input type="text" name="country" id="country" required
+                            placeholder="Your Country"></p>
+                    <p> Message*: <br> <textarea name="message" id="message" cols="30" rows="10" required
+                            placeholder="Write Your Message Here."></textarea></p>
+                    <input type="submit" value="Submit Form">
+                </form>
+            </div>
+        </section>
+    </main>
+</body>
+
+</html>
