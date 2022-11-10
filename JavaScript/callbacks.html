@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Callbacks</title>
+</head>
+<body>
+    <div id="root"></div>
+</body>
+<script>
+    /*
+    //  THIS IS CALL BACK FUNCTION.
+    const posts = [
+        { title: "first post", body: "this is first post"},
+        { title: "second post", body: "this is second post"}
+    ];
+
+    function getposts() {
+        setTimeout(() => {  // this will set a timeout that the output will show after the 1000ms.
+            let output = '';
+            posts.forEach((post, index) => {
+                output += `<li>${post.title}</li>`;
+            })
+            document.getElementById("root").innerHTML = output;
+            // console.log(output);
+        }, 1000);
+    }
+    // getposts();
+    */
+
+    /*
+    function createPost(post) {
+        setTimeout(() => {
+            posts.push(post);
+        }, 2000);
+    }
+    ye pura function dobara se likha jayega call back function ke saath.
+    */
+    // we will not see any output as ek baar getposts() wala function chal gya fir dobara se nhi chalega
+    // and dom ko pehle se he getposts() wala function use kar chuka hai isliye bhi dobara se wo re-render nhi hua.
+/*
+    function createPost(post, callback) {
+        setTimeout(() => {
+            posts.push(post);
+            callback();
+        }, 2000);
+    }
+    createPost = ({title: "post three", body:"this is post three"}, getposts());
+  
+  */
+
+ // THIS IS PROMISE OBJECT.
+ const posts = [
+        { title: "first post", body: "this is first post"},
+        { title: "second post", body: "this is second post"}
+    ];
+
+    function getposts() {
+        setTimeout(() => {  // this will set a timeout that the output will show after the 1000ms.
+            let output = '';
+            posts.forEach((post, index) => {
+                output += `<li>${post.title}</li>`;
+            })
+            document.getElementById("root").innerHTML = output;
+            // console.log(output);
+        }, 1000);
+    }
+
+    function createPost(post) {
+        return new Promise((resolve, reject) => {
+            setTimeout(() => {
+                posts.push(post);
+
+                const error = false;
+
+                if(!error) {
+                    resolve();
+                } else {
+                    reject("Error: something went wrong");
+                }
+            }, 1000);
+        })
+    }
+
+    //  ASYNC FUNCTION : A MORE ELEGANT WAY TO HANDLE PROMISES.
+    async function init() {
+     await createPost({title:"third post", body: "this is third post"});
+    getposts();
+    }
+    init();
+
+</script>
+</html>

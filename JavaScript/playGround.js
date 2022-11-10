@@ -11,7 +11,7 @@ WHAT WE GOING TO LEARN IN THIS :
 5. Arrays (83)
 6. Objects (91)
 7. functions for object (110)
-3. loops (138)
+8. loops (138)
 9. Higher Order Functions (254)
    a. map
    b. filter

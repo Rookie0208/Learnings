@@ -14,11 +14,11 @@ if ($conn->connect_error) {
   */
   if(isset($_POST['signup']))
   {
-    $name = $_POST['name'];
+    $name = $_POST['firstname'];
     $email = $_POST['email'];
     $password = $_POST['password'];
-    $country = $_POST['country'];
-    $query = INSERT INTO `auth` (`id`, `usename`, `email`, `password`, `country`) VALUES ($username, $email, $password, $country);
+    // $country = $_POST['country'];
+    $query = INSERT INTO `auth` (`id`, `usename`, `email`, `password`) VALUES ($username, $email, $password);
     $result = mysqli_query($conn,$query);
     if($result)
     {
