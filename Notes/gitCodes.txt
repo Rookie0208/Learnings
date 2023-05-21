@@ -32,8 +32,17 @@ PULL RQST:
 If throwing error like :
  ! [rejected]        main -> main (fetch first)
 error: failed to push some refs to 'https://github.com/Rookie0208/Learnings.git'
+These error mainly come when we commit the code in wrong branch and trying to push it in another
+1st do this :
+$ git pull origin main
+$ git push origin main
 
-do this :
-$ git fetch origin/main
-$ git pull -r
-$ git push -u origin main
+if this is not working then do this :
+git push -f origin main
+git pull --rebase origin main
+
+if above approach still not working then : do these
+git checkout -b new-branch
+git add .
+git commit -m "Your commit message"
+git push origin new-branch
